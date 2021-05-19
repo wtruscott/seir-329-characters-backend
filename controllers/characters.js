@@ -4,7 +4,10 @@ const router = Router();
 
 //index route
 router.get("/", async (req, res) => {
-  res.json(await Character.find({}));
+    try{
+        res.json(await Character.find({}));
+    } catch(err){res.status(400).json(err)
+    }
 });
 
 //create route

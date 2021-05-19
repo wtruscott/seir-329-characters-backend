@@ -26,5 +26,6 @@ app.use(morgan("tiny")); // <----- logging for debugging
 app.get("/", (req, res) => res.send("Server is Working")); // <--- Route to test server
 app.use("/characters", peopleRouter); // send all "/places" requires to the peopleRouter
 
+
 // Server Listener
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
